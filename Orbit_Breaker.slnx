@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Orbit_Breaker/Orbit_Breaker.vcxproj" Id="e9c97f41-ca26-4993-b33a-6dcc6abf3472" />
+</Solution>

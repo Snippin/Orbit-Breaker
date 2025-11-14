@@ -39,3 +39,8 @@
 
 # debug information files
 *.dwo
+*.tlog
+*.log
+*.idb
+*.recipe
+.vs/
