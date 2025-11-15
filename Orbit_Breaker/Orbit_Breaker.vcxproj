@@ -115,13 +115,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)GLFW\include;$(SolutionDir)GLAD\include;$(SolutionDir)GLM;$(SolutionDir)Chipmunk2D\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)GLFW\include;$(SolutionDir)GLAD\include;$(SolutionDir)GLM;$(SolutionDir)Chipmunk2D\include;$(SolutionDir)SOIL2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib;$(SolutionDir)Chipmunk2D\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;chipmunk.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib;$(SolutionDir)Chipmunk2D\lib;$(SolutionDir)SOIL2\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;chipmunk.lib;soil2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -133,13 +133,13 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)GLFW\include;$(SolutionDir)GLAD\include;$(SolutionDir)GLM;$(SolutionDir)Chipmunk2D\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)GLFW\include;$(SolutionDir)GLAD\include;$(SolutionDir)GLM;$(SolutionDir)Chipmunk2D\include;$(SolutionDir)SOIL2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib;$(SolutionDir)Chipmunk2D\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;chipmunk.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib;$(SolutionDir)Chipmunk2D\lib;$(SolutionDir)SOIL2\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;chipmunk.lib;soil2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
