@@ -1,6 +1,16 @@
-#include <iostream>
+#include "Application.hpp"
 
 int main()
 {
-	return 0;
+	Application &app = Application::Get();
+
+	if (app.Init())
+	{
+		app.Run();
+		app.Destroy();
+
+		return 0;
+	}
+
+	return 1;
 }
