@@ -22,10 +22,12 @@
     <ClCompile Include="Src\Application.cpp" />
     <ClCompile Include="Src\main.cpp" />
     <ClCompile Include="Src\Miscellaneous\glad.c" />
+    <ClCompile Include="Src\Render\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Application.hpp" />
     <ClInclude Include="Src\DesignPattern\SingletonTemplate.hpp" />
+    <ClInclude Include="Src\Render\Shader.hpp" />
     <ClInclude Include="Src\Utility\Echo.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
