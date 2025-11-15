@@ -3,7 +3,7 @@
 #include "Utility/Echo.hpp"
 
 #include <glad/glad.h>
-#include <glfw3.h>
+#include <glfw/glfw3.h>
 
 bool Application::Init()
 {
@@ -16,7 +16,7 @@ bool Application::Init()
 	glfwDefaultWindowHints();
 	glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
 	glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
-	glfwWindowHint(GLFW_MAXIMIZED, GLFW_TRUE);
+	//glfwWindowHint(GLFW_MAXIMIZED, GLFW_TRUE);
 
 	const int window_width = 1280;
 	const int window_height = 720;
