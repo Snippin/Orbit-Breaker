@@ -14,6 +14,18 @@
     <Filter Include="Miscellaneous">
       <UniqueIdentifier>{59d6d8ee-aac5-4273-9c78-f41ab70fc4b7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{4df88114-097d-4ab5-a7c6-7212afd01440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Primitive">
+      <UniqueIdentifier>{79e4a69c-bc03-4af2-be1c-718b7cdec612}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Core">
+      <UniqueIdentifier>{41b56312-ed54-487a-b120-bec15e47ce58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{ee0a354f-44da-4695-8ea9-ed788b5421ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\main.cpp">
@@ -25,6 +37,18 @@
     <ClCompile Include="Src\Miscellaneous\glad.c">
       <Filter>Miscellaneous</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Component\Core\Transform.cpp">
+      <Filter>Component\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Primitive\GameObject.cpp">
+      <Filter>Primitive</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Primitive\Component.cpp">
+      <Filter>Primitive</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Render\Shader.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\DesignPattern\SingletonTemplate.hpp">
@@ -35,6 +59,18 @@
     </ClInclude>
     <ClInclude Include="Src\Utility\Echo.hpp">
       <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Component\Core\Transform.hpp">
+      <Filter>Component\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Primitive\GameObject.hpp">
+      <Filter>Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Primitive\Component.hpp">
+      <Filter>Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Render\Shader.hpp">
+      <Filter>Render</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
