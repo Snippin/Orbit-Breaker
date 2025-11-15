@@ -58,6 +58,9 @@
     <ClCompile Include="Src\Component\Core\SpriteRenderer.cpp">
       <Filter>Component\Core</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Render\Renderer.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\DesignPattern\SingletonTemplate.hpp">
@@ -89,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="Src\Component\Core\SpriteRenderer.hpp">
       <Filter>Component\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Render\Renderer.hpp">
+      <Filter>Render</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
