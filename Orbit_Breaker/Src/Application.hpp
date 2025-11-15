@@ -13,5 +13,5 @@ public:
 	void Destroy();
 
 private:
-	GLFWwindow* window;
+	GLFWwindow *window;
 };

@@ -18,12 +18,12 @@ bool Application::Init()
 	glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
 	glfwWindowHint(GLFW_MAXIMIZED, GLFW_TRUE);
 
-	const int windowWidth = 1280;
-	const int windowHeight = 720;
+	const int window_width = 1280;
+	const int window_height = 720;
 
 	// Create window
-	window = glfwCreateWindow(windowWidth, windowHeight,
-		"Orbit Breaker", nullptr, nullptr);
+	window = glfwCreateWindow(window_width, window_height, "Orbit Breaker",
+		nullptr, nullptr);
 	if (window == nullptr)
 	{
 		Echo::Error("Failed to open GLFW window");
@@ -47,7 +47,7 @@ bool Application::Init()
 	glEnable(GL_DEPTH_TEST);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-	glViewport(0, 0, windowWidth, windowHeight);
+	glViewport(0, 0, window_width, window_height);
 
 	return true;
 }
