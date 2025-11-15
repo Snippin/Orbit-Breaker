@@ -49,6 +49,15 @@
     <ClCompile Include="Src\Render\Shader.cpp">
       <Filter>Render</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Primitive\Sprite.cpp">
+      <Filter>Primitive</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Render\Texture.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Component\Core\SpriteRenderer.cpp">
+      <Filter>Component\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\DesignPattern\SingletonTemplate.hpp">
@@ -71,6 +80,15 @@
     </ClInclude>
     <ClInclude Include="Src\Render\Shader.hpp">
       <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Primitive\Sprite.hpp">
+      <Filter>Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Render\Texture.hpp">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Component\Core\SpriteRenderer.hpp">
+      <Filter>Component\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -20,20 +20,26 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Application.cpp" />
+    <ClCompile Include="Src\Component\Core\SpriteRenderer.cpp" />
     <ClCompile Include="Src\Component\Core\Transform.cpp" />
     <ClCompile Include="Src\main.cpp" />
     <ClCompile Include="Src\Miscellaneous\glad.c" />
     <ClCompile Include="Src\Primitive\Component.cpp" />
     <ClCompile Include="Src\Primitive\GameObject.cpp" />
+    <ClCompile Include="Src\Primitive\Sprite.cpp" />
     <ClCompile Include="Src\Render\Shader.cpp" />
+    <ClCompile Include="Src\Render\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Application.hpp" />
+    <ClInclude Include="Src\Component\Core\SpriteRenderer.hpp" />
     <ClInclude Include="Src\Component\Core\Transform.hpp" />
     <ClInclude Include="Src\DesignPattern\SingletonTemplate.hpp" />
     <ClInclude Include="Src\Primitive\Component.hpp" />
     <ClInclude Include="Src\Primitive\GameObject.hpp" />
+    <ClInclude Include="Src\Primitive\Sprite.hpp" />
     <ClInclude Include="Src\Render\Shader.hpp" />
+    <ClInclude Include="Src\Render\Texture.hpp" />
     <ClInclude Include="Src\Utility\Echo.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -129,7 +135,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib;$(SolutionDir)Chipmunk2D\lib;$(SolutionDir)SOIL2\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;chipmunk.lib;soil2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;chipmunk.lib;soil2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,7 +153,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib;$(SolutionDir)Chipmunk2D\lib;$(SolutionDir)SOIL2\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;chipmunk.lib;soil2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;chipmunk.lib;soil2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

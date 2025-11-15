@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../Component/Core/Transform.hpp"
 #include "Component.hpp"
 
 #include <algorithm>
@@ -36,6 +37,8 @@ public:
 	void SetTag(const std::string &new_tag);
 
 	void GenerateId();
+
+	std::shared_ptr<Transform> transform;
 
 private:
 	inline static unsigned int ID_COUNTER;
