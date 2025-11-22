@@ -31,10 +31,12 @@ public:
 	unsigned int GetUid() const;
 	bool IsActive() const;
 	const std::string &GetTag() const;
+	bool IsDead() const;
 
 	void SetUid(unsigned int new_uid);
 	void SetActive(bool active = true);
 	void SetTag(const std::string &new_tag);
+	void SetDead();
 
 	void GenerateId();
 
@@ -49,6 +51,7 @@ private:
 	std::unordered_map<std::type_index, std::shared_ptr<Component>>
 		component_lookup;
 	bool is_active;
+	bool is_dead;
 };
 
 template<typename T>

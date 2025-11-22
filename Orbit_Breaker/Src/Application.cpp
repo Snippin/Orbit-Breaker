@@ -1,17 +1,12 @@
 #include "Application.hpp"
 
-#include "Component/Core/SpriteRenderer.hpp"
-#include "Component/Core/Transform.hpp"
-#include "Primitive/GameObject.hpp"
-#include "Render/Renderer.hpp"
-#include "Render/Shader.hpp"
-#include "Render/Texture.hpp"
+#include "SceneManagement/Scene/MainMenu.hpp"
+#include "SceneManagement/SceneManager.hpp"
+#include "SceneManagement/SceneType.hpp"
 #include "Utility/Echo.hpp"
 
 #include <glad/glad.h>
 #include <glfw/glfw3.h>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
 
 bool Application::Init()
 {
@@ -61,26 +56,10 @@ bool Application::Init()
 
 void Application::Run()
 {
-	auto shader = std::make_shared<Shader>("Shader/default.vs",
-		"Shader/default.fs");
-	shader->Bind();
-	shader->SetMat4("Projection", glm::ortho(-1.f, 1.f, -1.f, 1.f, -1.f, 1.f));
-	shader->SetMat4("View", glm::mat4(1.0f));
-	shader->Unbind();
-
-	auto blank_texture = std::make_shared<Texture>();
-	blank_texture->Init("Asset/blank.jpg");
-	auto go = std::make_shared<GameObject>();
-	go->transform = go->AddComponent<Transform>();
-	go->transform->scale = glm::vec2{0.5f};
-	go->AddComponent<SpriteRenderer>(blank_texture)->
-		SetColor({1.f, 1.f, 0.f, 1.f});
-	go->Start();
-
-	Renderer renderer;
-	renderer.SetShader(shader);
-	renderer.Add(go);
-	renderer.Start();
+	auto scene_manager = &SceneManager::Get();
+	scene_manager->AddScene(SceneType::MAIN_MENU,
+		std::make_shared<MainMenu>());
+	scene_manager->SetActiveScene(SceneType::MAIN_MENU);
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -90,7 +69,8 @@ void Application::Run()
 		glClearColor(0, 0, 0, 1);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		renderer.Render();
+		scene_manager->Update(1.f);
+		scene_manager->Render();
 
 		glfwSwapBuffers(window);
 	}

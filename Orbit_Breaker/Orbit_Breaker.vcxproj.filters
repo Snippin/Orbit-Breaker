@@ -26,6 +26,12 @@
     <Filter Include="Render">
       <UniqueIdentifier>{ee0a354f-44da-4695-8ea9-ed788b5421ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SceneManagement">
+      <UniqueIdentifier>{850af7ff-a188-4eb0-aec5-02deaf51c36e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SceneManagement\Scene">
+      <UniqueIdentifier>{895944ac-06cc-4732-a4a5-b86f07713de7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\main.cpp">
@@ -61,6 +67,15 @@
     <ClCompile Include="Src\Render\Renderer.cpp">
       <Filter>Render</Filter>
     </ClCompile>
+    <ClCompile Include="Src\SceneManagement\SceneManager.cpp">
+      <Filter>SceneManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SceneManagement\Scene.cpp">
+      <Filter>SceneManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SceneManagement\Scene\MainMenu.cpp">
+      <Filter>SceneManagement\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\DesignPattern\SingletonTemplate.hpp">
@@ -95,6 +110,18 @@
     </ClInclude>
     <ClInclude Include="Src\Render\Renderer.hpp">
       <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SceneManagement\SceneManager.hpp">
+      <Filter>SceneManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SceneManagement\Scene.hpp">
+      <Filter>SceneManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SceneManagement\SceneType.hpp">
+      <Filter>SceneManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\SceneManagement\Scene\MainMenu.hpp">
+      <Filter>SceneManagement\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -5,6 +5,7 @@
 GameObject::GameObject()
 {
 	is_active = true;
+	is_dead = false;
 	tag = "";
 	uid = ++ID_COUNTER;
 }
@@ -52,6 +53,11 @@ const std::string &GameObject::GetTag() const
 	return tag;
 }
 
+bool GameObject::IsDead() const
+{
+	return is_dead;
+}
+
 void GameObject::SetUid(unsigned int new_uid)
 {
 	uid = new_uid;
@@ -70,6 +76,11 @@ void GameObject::SetActive(bool active)
 void GameObject::SetTag(const std::string &new_tag)
 {
 	tag = new_tag;
+}
+
+void GameObject::SetDead()
+{
+	is_dead = true;
 }
 
 void GameObject::GenerateId()

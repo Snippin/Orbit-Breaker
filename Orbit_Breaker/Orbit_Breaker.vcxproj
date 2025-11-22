@@ -30,6 +30,9 @@
     <ClCompile Include="Src\Render\Renderer.cpp" />
     <ClCompile Include="Src\Render\Shader.cpp" />
     <ClCompile Include="Src\Render\Texture.cpp" />
+    <ClCompile Include="Src\SceneManagement\Scene.cpp" />
+    <ClCompile Include="Src\SceneManagement\SceneManager.cpp" />
+    <ClCompile Include="Src\SceneManagement\Scene\MainMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Application.hpp" />
@@ -42,6 +45,10 @@
     <ClInclude Include="Src\Render\Renderer.hpp" />
     <ClInclude Include="Src\Render\Shader.hpp" />
     <ClInclude Include="Src\Render\Texture.hpp" />
+    <ClInclude Include="Src\SceneManagement\Scene.hpp" />
+    <ClInclude Include="Src\SceneManagement\SceneManager.hpp" />
+    <ClInclude Include="Src\SceneManagement\SceneType.hpp" />
+    <ClInclude Include="Src\SceneManagement\Scene\MainMenu.hpp" />
     <ClInclude Include="Src\Utility\Echo.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
