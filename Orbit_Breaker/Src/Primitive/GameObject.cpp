@@ -8,6 +8,7 @@ GameObject::GameObject()
 	is_dead = false;
 	tag = "";
 	uid = ++ID_COUNTER;
+	transform = AddComponent<Transform>();
 }
 
 void GameObject::Start()

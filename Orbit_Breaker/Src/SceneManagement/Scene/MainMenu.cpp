@@ -14,13 +14,11 @@ void MainMenu::Init()
 	auto blank_texture = std::make_shared<Texture>();
 	blank_texture->Init("Asset/blank.jpg");
 	auto go = std::make_shared<GameObject>();
-	go->transform = go->AddComponent<Transform>();
 	go->transform->scale = glm::vec2{100.f};
 	go->AddComponent<SpriteRenderer>(blank_texture)->
 		SetColor({1.f, 1.f, 0.f, 1.f});
 
 	auto go2 = std::make_shared<GameObject>();
-	go2->transform = go2->AddComponent<Transform>();
 	go2->transform->scale = glm::vec2{1.f};
 	go2->AddComponent<SpriteRenderer>(blank_texture)->
 		SetColor({0.f, 1.f, 1.f, 1.f});
