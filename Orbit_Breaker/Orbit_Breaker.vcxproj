@@ -27,6 +27,7 @@
     <ClCompile Include="Src\Primitive\Component.cpp" />
     <ClCompile Include="Src\Primitive\GameObject.cpp" />
     <ClCompile Include="Src\Primitive\Sprite.cpp" />
+    <ClCompile Include="Src\Render\BatchRenderer.cpp" />
     <ClCompile Include="Src\Render\Renderer.cpp" />
     <ClCompile Include="Src\Render\Shader.cpp" />
     <ClCompile Include="Src\Render\Texture.cpp" />
@@ -42,6 +43,7 @@
     <ClInclude Include="Src\Primitive\Component.hpp" />
     <ClInclude Include="Src\Primitive\GameObject.hpp" />
     <ClInclude Include="Src\Primitive\Sprite.hpp" />
+    <ClInclude Include="Src\Render\BatchRenderer.hpp" />
     <ClInclude Include="Src\Render\Renderer.hpp" />
     <ClInclude Include="Src\Render\Shader.hpp" />
     <ClInclude Include="Src\Render\Texture.hpp" />

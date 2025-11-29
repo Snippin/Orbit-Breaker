@@ -76,6 +76,9 @@
     <ClCompile Include="Src\SceneManagement\Scene\MainMenu.cpp">
       <Filter>SceneManagement\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Render\BatchRenderer.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\DesignPattern\SingletonTemplate.hpp">
@@ -122,6 +125,9 @@
     </ClInclude>
     <ClInclude Include="Src\SceneManagement\Scene\MainMenu.hpp">
       <Filter>SceneManagement\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Render\BatchRenderer.hpp">
+      <Filter>Render</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -19,7 +19,7 @@ void Scene::Init()
 	shader->SetMat4("Projection", glm::ortho(-1.f, 1.f, -1.f, 1.f, -1.f, 1.f));
 	shader->SetMat4("View", glm::mat4(1.0f));
 	shader->Unbind();
-	renderer.SetShader(shader);
+	Renderer::SetShader(shader);
 }
 
 void Scene::Start()
@@ -31,7 +31,6 @@ void Scene::Start()
 	}
 
 	is_running = true;
-	renderer.Start();
 }
 
 void Scene::Destroy() const
