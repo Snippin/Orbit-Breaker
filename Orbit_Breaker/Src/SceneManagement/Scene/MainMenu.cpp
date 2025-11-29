@@ -9,8 +9,6 @@
 
 void MainMenu::Init()
 {
-	Scene::Init();
-
 	auto blank_texture = std::make_shared<Texture>();
 	blank_texture->Init("Asset/blank.jpg");
 	auto go = std::make_shared<GameObject>();

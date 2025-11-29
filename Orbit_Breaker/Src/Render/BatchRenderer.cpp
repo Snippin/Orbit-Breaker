@@ -2,6 +2,8 @@
 
 #include "../Component/Core/SpriteRenderer.hpp"
 #include "../Primitive/GameObject.hpp"
+#include "../SceneManagement/Scene.hpp"
+#include "../SceneManagement/SceneManager.hpp"
 #include "Renderer.hpp"
 #include "Shader.hpp"
 #include "Texture.hpp"
@@ -106,8 +108,14 @@ void BatchRenderer::Render()
 			vertices.data());
 	}
 
+	auto &scene_manager = SceneManager::Get();
+
 	const auto &shader = Renderer::GetShader();
 	shader->Bind();
+	shader->SetMat4("Projection",
+		scene_manager.GetActiveCamera()->GetProjectionMatrix());
+	shader->SetMat4("View",
+		scene_manager.GetActiveCamera()->GetViewMatrix());
 
 	glBindVertexArray(VAO);
 	glEnableVertexAttribArray(0);

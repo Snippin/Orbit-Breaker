@@ -7,6 +7,7 @@
 #include <memory>
 
 class Scene;
+class Camera;
 
 class SceneManager : public SingletonTemplate<SceneManager>
 {
@@ -18,6 +19,8 @@ public:
 	bool AddScene(SceneType type, std::shared_ptr<Scene> scene);
 	bool RemoveScene(SceneType type);
 	bool SetActiveScene(SceneType type);
+
+	Camera *GetActiveCamera();
 
 private:
 	bool DoesSceneExist(SceneType type) const;

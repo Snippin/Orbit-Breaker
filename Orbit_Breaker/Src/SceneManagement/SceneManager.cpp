@@ -64,6 +64,11 @@ bool SceneManager::SetActiveScene(SceneType type)
 	return true;
 }
 
+Camera *SceneManager::GetActiveCamera()
+{
+	return current_scene->GetCamera();;
+}
+
 bool SceneManager::DoesSceneExist(SceneType type) const
 {
 	return scene_map.contains(type);

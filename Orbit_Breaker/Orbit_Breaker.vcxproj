@@ -24,6 +24,7 @@
     <ClCompile Include="Src\Component\Core\Transform.cpp" />
     <ClCompile Include="Src\main.cpp" />
     <ClCompile Include="Src\Miscellaneous\glad.c" />
+    <ClCompile Include="Src\Primitive\Camera.cpp" />
     <ClCompile Include="Src\Primitive\Component.cpp" />
     <ClCompile Include="Src\Primitive\GameObject.cpp" />
     <ClCompile Include="Src\Primitive\Sprite.cpp" />
@@ -40,6 +41,7 @@
     <ClInclude Include="Src\Component\Core\SpriteRenderer.hpp" />
     <ClInclude Include="Src\Component\Core\Transform.hpp" />
     <ClInclude Include="Src\DesignPattern\SingletonTemplate.hpp" />
+    <ClInclude Include="Src\Primitive\Camera.hpp" />
     <ClInclude Include="Src\Primitive\Component.hpp" />
     <ClInclude Include="Src\Primitive\GameObject.hpp" />
     <ClInclude Include="Src\Primitive\Sprite.hpp" />

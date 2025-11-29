@@ -1,7 +1,6 @@
 #include "Scene.hpp"
 
 #include "../Primitive/GameObject.hpp"
-#include "../Render/Shader.hpp"
 
 #include <algorithm>
 #include <glm/gtc/matrix_transform.hpp>
@@ -9,17 +8,6 @@
 Scene::Scene() :
 	is_running{}
 {
-}
-
-void Scene::Init()
-{
-	auto shader = std::make_shared<Shader>("Shader/default.vs",
-		"Shader/default.fs");
-	shader->Bind();
-	shader->SetMat4("Projection", glm::ortho(-1.f, 1.f, -1.f, 1.f, -1.f, 1.f));
-	shader->SetMat4("View", glm::mat4(1.0f));
-	shader->Unbind();
-	Renderer::SetShader(shader);
 }
 
 void Scene::Start()
@@ -59,6 +47,11 @@ void Scene::Update(float dt)
 void Scene::Render()
 {
 	renderer.Render();
+}
+
+Camera *Scene::GetCamera()
+{
+	return &camera;
 }
 
 void Scene::AddGameObject(std::shared_ptr<GameObject> go)

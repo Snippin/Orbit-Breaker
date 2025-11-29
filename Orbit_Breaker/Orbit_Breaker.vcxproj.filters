@@ -79,6 +79,9 @@
     <ClCompile Include="Src\Render\BatchRenderer.cpp">
       <Filter>Render</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Primitive\Camera.cpp">
+      <Filter>Primitive</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\DesignPattern\SingletonTemplate.hpp">
@@ -128,6 +131,9 @@
     </ClInclude>
     <ClInclude Include="Src\Render\BatchRenderer.hpp">
       <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Primitive\Camera.hpp">
+      <Filter>Primitive</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

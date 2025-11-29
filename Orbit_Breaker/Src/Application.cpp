@@ -1,5 +1,6 @@
 #include "Application.hpp"
 
+#include "Render/Shader.hpp"
 #include "SceneManagement/Scene/MainMenu.hpp"
 #include "SceneManagement/SceneManager.hpp"
 #include "SceneManagement/SceneType.hpp"
@@ -56,10 +57,15 @@ bool Application::Init()
 
 void Application::Run()
 {
+	auto shader = std::make_shared<Shader>("Shader/default.vs",
+		"Shader/default.fs");
+	Renderer::SetShader(shader);
+
 	auto scene_manager = &SceneManager::Get();
 	scene_manager->AddScene(SceneType::MAIN_MENU,
 		std::make_shared<MainMenu>());
 	scene_manager->SetActiveScene(SceneType::MAIN_MENU);
+	scene_manager->GetActiveCamera()->position = {-1.f, -1.f};
 
 	while (!glfwWindowShouldClose(window))
 	{
