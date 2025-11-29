@@ -4,6 +4,7 @@
 #include "SceneManagement/Scene/MainMenu.hpp"
 #include "SceneManagement/SceneManager.hpp"
 #include "SceneManagement/SceneType.hpp"
+#include "System/Time.hpp"
 #include "Utility/Echo.hpp"
 
 #include <glad/glad.h>
@@ -67,6 +68,10 @@ void Application::Run()
 	scene_manager->SetActiveScene(SceneType::MAIN_MENU);
 	scene_manager->GetActiveCamera()->position = {-1.f, -1.f};
 
+	auto &time = Time::Get();
+	time.Init();
+	time.StartTimer();
+
 	while (!glfwWindowShouldClose(window))
 	{
 		// Poll events
@@ -75,10 +80,12 @@ void Application::Run()
 		glClearColor(0, 0, 0, 1);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		scene_manager->Update(1.f);
+		scene_manager->Update(time.GetDeltaTime());
 		scene_manager->Render();
 
 		glfwSwapBuffers(window);
+
+		time.Update();
 	}
 }
 
