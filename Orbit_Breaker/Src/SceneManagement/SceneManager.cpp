@@ -64,6 +64,11 @@ bool SceneManager::SetActiveScene(SceneType type)
 	return true;
 }
 
+SceneType SceneManager::GetCurrentSceneType() const
+{
+	return current_scene_type;
+}
+
 Camera *SceneManager::GetActiveCamera()
 {
 	return current_scene->GetCamera();;

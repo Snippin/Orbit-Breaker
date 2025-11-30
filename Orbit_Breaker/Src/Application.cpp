@@ -1,5 +1,6 @@
 #include "Application.hpp"
 
+#include "Input/KeyInput.hpp"
 #include "SceneManagement/Scene/MainMenu.hpp"
 #include "SceneManagement/SceneManager.hpp"
 #include "SceneManagement/SceneType.hpp"
@@ -9,6 +10,18 @@
 
 #include <glad/glad.h>
 #include <glfw/glfw3.h>
+
+static void SetGLFWCallbacks(GLFWwindow *window)
+{
+	// Key callbacks
+	glfwSetKeyCallback(window,
+		[]([[maybe_unused]] GLFWwindow *glfw_window, int key,
+		[[maybe_unused]] int scan_code, int action, [[maybe_unused]] int mods)
+		{
+			KeyInput::Update(key, action);
+		}
+	);
+}
 
 bool Application::Init()
 {
@@ -53,6 +66,8 @@ bool Application::Init()
 
 	glViewport(0, 0, window_width, window_height);
 
+	SetGLFWCallbacks(window);
+
 	return true;
 }
 
@@ -76,6 +91,12 @@ void Application::Run()
 		// Poll events
 		glfwPollEvents();
 
+		if (KeyInput::IsKeyPressed(GLFW_KEY_ESCAPE) &&
+			scene_manager->GetCurrentSceneType() == SceneType::MAIN_MENU)
+		{
+			glfwSetWindowShouldClose(window, GLFW_TRUE);
+		}
+
 		glClearColor(0, 0, 0, 1);
 		glClear(GL_COLOR_BUFFER_BIT);
 
@@ -84,6 +105,7 @@ void Application::Run()
 
 		glfwSwapBuffers(window);
 
+		KeyInput::PostUpdate();
 		time.Update();
 	}
 }

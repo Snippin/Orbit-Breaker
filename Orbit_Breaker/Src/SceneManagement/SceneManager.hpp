@@ -20,6 +20,7 @@ public:
 	bool RemoveScene(SceneType type);
 	bool SetActiveScene(SceneType type);
 
+	SceneType GetCurrentSceneType() const;
 	Camera *GetActiveCamera();
 
 private:
