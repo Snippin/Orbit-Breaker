@@ -1,9 +1,9 @@
 #include "Application.hpp"
 
-#include "Render/Shader.hpp"
 #include "SceneManagement/Scene/MainMenu.hpp"
 #include "SceneManagement/SceneManager.hpp"
 #include "SceneManagement/SceneType.hpp"
+#include "System/Assets.hpp"
 #include "System/Time.hpp"
 #include "Utility/Echo.hpp"
 
@@ -58,8 +58,7 @@ bool Application::Init()
 
 void Application::Run()
 {
-	auto shader = std::make_shared<Shader>("Shader/default.vs",
-		"Shader/default.fs");
+	auto shader = Assets::GetShader("Shader/default");
 	Renderer::SetShader(shader);
 
 	auto scene_manager = &SceneManager::Get();

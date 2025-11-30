@@ -35,6 +35,7 @@
     <ClCompile Include="Src\SceneManagement\Scene.cpp" />
     <ClCompile Include="Src\SceneManagement\SceneManager.cpp" />
     <ClCompile Include="Src\SceneManagement\Scene\MainMenu.cpp" />
+    <ClCompile Include="Src\System\Assets.cpp" />
     <ClCompile Include="Src\System\Time.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +55,7 @@
     <ClInclude Include="Src\SceneManagement\SceneManager.hpp" />
     <ClInclude Include="Src\SceneManagement\SceneType.hpp" />
     <ClInclude Include="Src\SceneManagement\Scene\MainMenu.hpp" />
+    <ClInclude Include="Src\System\Assets.hpp" />
     <ClInclude Include="Src\System\Time.hpp" />
     <ClInclude Include="Src\Utility\Echo.hpp" />
   </ItemGroup>

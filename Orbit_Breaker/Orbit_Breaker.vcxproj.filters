@@ -88,6 +88,9 @@
     <ClCompile Include="Src\System\Time.cpp">
       <Filter>System</Filter>
     </ClCompile>
+    <ClCompile Include="Src\System\Assets.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\DesignPattern\SingletonTemplate.hpp">
@@ -142,6 +145,9 @@
       <Filter>Primitive</Filter>
     </ClInclude>
     <ClInclude Include="Src\System\Time.hpp">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\System\Assets.hpp">
       <Filter>System</Filter>
     </ClInclude>
   </ItemGroup>

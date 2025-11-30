@@ -2,15 +2,14 @@
 
 #include "../../Component/Core/SpriteRenderer.hpp"
 #include "../../Primitive/GameObject.hpp"
-#include "../../Render/Texture.hpp"
+#include "../../System/Assets.hpp"
 
 #include <glm/glm.hpp>
 #include <memory>
 
 void MainMenu::Init()
 {
-	auto blank_texture = std::make_shared<Texture>();
-	blank_texture->Init("Asset/blank.jpg");
+	auto blank_texture = Assets::GetTexture("Asset/blank.jpg");
 	auto go = std::make_shared<GameObject>();
 	go->transform->scale = glm::vec2{100.f};
 	go->AddComponent<SpriteRenderer>(blank_texture)->
