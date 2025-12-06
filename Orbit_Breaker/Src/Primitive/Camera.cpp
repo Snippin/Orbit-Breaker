@@ -8,7 +8,7 @@ Camera::Camera(glm::vec2 position)
 	this->position = position;
 	projection_matrix = glm::mat4(1.f);
 	view_matrix = glm::mat4(1.f);
-	projection_size = {16.f, 9.f};
+	projection_size = {32.f, 18.f};
 	zoom = 1.f;
 
 	AdjustProjection();

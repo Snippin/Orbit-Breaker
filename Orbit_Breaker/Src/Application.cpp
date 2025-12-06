@@ -63,6 +63,7 @@ bool Application::Init()
 	}
 
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glEnable(GL_BLEND);
 
 	glViewport(0, 0, window_width, window_height);
 
@@ -73,7 +74,7 @@ bool Application::Init()
 
 void Application::Run()
 {
-	auto shader = Assets::GetShader("Shader/default");
+	auto shader = Assets::GetShader("Shader/texture");
 	Renderer::SetShader(shader);
 
 	auto scene_manager = &SceneManager::Get();
